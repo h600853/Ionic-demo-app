@@ -28,8 +28,10 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        {/* Grid to display photos */}
         <IonGrid>
           <IonRow>
+          {/* Mapping through photos array to display each photo */}
             {photos.map((photo, index) => (
               <IonCol size="6" key={photo.filepath}>
                 <IonImg src={photo.webviewPath} />
@@ -38,6 +40,7 @@ const Tab2: React.FC = () => {
           </IonRow>
         </IonGrid>
         <IonFab vertical="bottom" horizontal="center" slot="fixed">
+           {/* Button to take photo */}
           <IonFabButton onClick={() => takePhoto()}>
             <IonIcon icon={camera}></IonIcon>
           </IonFabButton>
